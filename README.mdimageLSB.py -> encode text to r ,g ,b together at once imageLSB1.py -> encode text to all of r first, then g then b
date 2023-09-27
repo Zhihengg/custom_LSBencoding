@@ -1,0 +1,5 @@
+# custom_LSBencoding
+allow user to not only encode text into image, but also specify the number of least significant bits. e.g. 3LSB or 8LSB
+
+imageLSB.py -> encode text to r ,g ,b together at once
+imageLSB1.py -> encode text to all of r first, then g then b
