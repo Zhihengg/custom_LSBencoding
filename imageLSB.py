@@ -122,10 +122,10 @@ def decode(image_name, lsb):
             r, g, b = to_bin(pixel)
             # Extract the LSB of Red channel and add to binary_data
             binary_data += r[-(lsb):]
-            if nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
+            if len(binary_data)>len(nullt) and nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
                 status = 1
                 break
-        if nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
+        if len(binary_data)>len(nullt) and nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
             status = 1
             break
 
@@ -138,10 +138,10 @@ def decode(image_name, lsb):
                 r, g, b = to_bin(pixel)
                 # Extract the LSB of Red channel and add to binary_data
                 binary_data += g[-(lsb):]
-                if nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
+                if len(binary_data)>len(nullt) and nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
                     status = 1
                     break
-            if nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
+            if len(binary_data)>len(nullt) and nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
                 status = 1
                 break
     # decode from all b channels (should nv reach here unless u input harry potter bruh)
@@ -153,10 +153,10 @@ def decode(image_name, lsb):
                 r, g, b = to_bin(pixel)
                 # Extract the LSB of Red channel and add to binary_data
                 binary_data += g[-(lsb):]
-                if nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
+                if len(binary_data)>len(nullt) and nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
                     status = 1
                     break
-            if nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
+            if len(binary_data)>len(nullt) and nullt in binary_data:  # idt this is working. Technically to find the terminator, but even if cant find also its ok
                 status = 1
                 break
     if status != 1:
